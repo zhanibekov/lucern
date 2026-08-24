@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Purple four leaf clover">
+  <defs>
+    <linearGradient id="bg" x1="7" y1="6" x2="58" y2="59" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbf7ff"/>
+      <stop offset="1" stop-color="#eadcff"/>
+    </linearGradient>
+    <linearGradient id="clover" x1="15" y1="12" x2="51" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c084fc"/>
+      <stop offset="0.52" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+    <filter id="shadow" x="5" y="5" width="54" height="54" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#4c1d95" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="24" fill="#ffffff" opacity=".78"/>
+  <g filter="url(#shadow)">
+    <path d="M31.8 30.4C20.6 23.7 17.4 17.2 20.2 12.7c2.5-4 8.4-3.5 11.8 1.7 3.3-5.2 9.2-5.7 11.7-1.7 2.8 4.5-.4 11-11.9 17.7Z" fill="url(#clover)"/>
+    <path d="M33.6 31.8c6.7-11.2 13.2-14.4 17.7-11.6 4 2.5 3.5 8.4-1.7 11.8 5.2 3.3 5.7 9.2 1.7 11.7-4.5 2.8-11-.4-17.7-11.9Z" fill="url(#clover)"/>
+    <path d="M32.2 33.6c11.2 6.7 14.4 13.2 11.6 17.7-2.5 4-8.4 3.5-11.8-1.7-3.3 5.2-9.2 5.7-11.7 1.7-2.8-4.5.4-11 11.9-17.7Z" fill="url(#clover)"/>
+    <path d="M30.4 32.2C23.7 43.4 17.2 46.6 12.7 43.8c-4-2.5-3.5-8.4 1.7-11.8-5.2-3.3-5.7-9.2-1.7-11.7 4.5-2.8 11 .4 17.7 11.9Z" fill="url(#clover)"/>
+    <circle cx="32" cy="32" r="4.2" fill="#f7e8ff"/>
+    <path d="M33.5 35.5c4.9 4.5 8.7 8.7 11.5 14.5" fill="none" stroke="#6d28d9" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <path d="M22 18.5c1.7-2.2 4.7-2.3 7.1.2M39.3 18.5c2.2-1.7 5.1-1.1 6.4 1.4M18.6 40.8c-2.2-1.7-2.3-4.7.2-7.1" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" opacity=".66"/>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "ТОО «Дастан-4» — семена люцерны в Казахстане",
+  "description": "Сайт для продажи семян люцерны «Семиреченская местная»: каталог, фасовки, документы, доставка и калькулятор нормы высева.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
