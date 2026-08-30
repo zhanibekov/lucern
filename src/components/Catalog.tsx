@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Sparkles, ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { CATALOG_CATEGORIES } from '../data/products';
 import { Product } from '../types';
 import { ProductCard } from './ProductCard';
@@ -135,28 +135,6 @@ export const Catalog: React.FC<CatalogProps> = ({ language, products, onOrder, o
             </button>
           </div>
         )}
-
-        {/* Wholesale High-Density Bottom Banner */}
-        <div className="mt-8 bg-white rounded-xl border border-[#E5E5E1] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-          <div className="space-y-1 text-center sm:text-left">
-            <div className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#748C2E]">
-              <Sparkles className="w-3 h-3" /> {language === 'ru' ? 'Оптовые контракты для хозяйств' : 'Шаруашылықтарға көтерме келісімдер'}
-            </div>
-            <h3 className="text-base font-bold text-[#1B4332]">
-              {text.wholesaleTitle}
-            </h3>
-            <p className="text-xs text-[#5C5C57]">
-              {text.wholesaleText}
-            </p>
-          </div>
-
-          <button
-            onClick={() => onOrder(language === 'ru' ? 'Оптовая партия семян люцерны' : 'Жоңышқа тұқымының көтерме партиясы')}
-            className="px-4 py-2.5 bg-[#1B4332] hover:bg-[#153428] active:scale-98 text-white text-xs font-bold rounded-lg uppercase tracking-wider transition whitespace-nowrap cursor-pointer shrink-0"
-          >
-            {text.requestPrice}
-          </button>
-        </div>
 
       </div>
     </section>
