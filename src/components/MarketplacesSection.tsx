@@ -5,12 +5,12 @@ import { Language } from '../i18n';
 
 export const MarketplacesSection: React.FC<{ language: Language }> = ({ language }) => {
   const marketplaces = [
-    { name: 'Kaspi.kz', domain: 'kaspi.kz', color: '#e31e24' },
-    { name: 'Wildberries', domain: 'wildberries.ru', color: '#a100ff' },
-    { name: 'Ozon', domain: 'ozon.ru', color: '#005bff' },
-    { name: 'Halyk', domain: 'halykmarket.kz', color: '#00a651' },
-    { name: 'Tez', domain: 'tez.kz', color: '#ff7a00' },
-    { name: 'Flip.kz', domain: 'flip.kz', color: '#2f80ed' }
+    { name: 'Kaspi.kz', logo: '/marketplaces/kaspi.png', color: '#e31e24' },
+    { name: 'Wildberries', logo: '/marketplaces/wildberries.png', color: '#a100ff' },
+    { name: 'Ozon', logo: '/marketplaces/ozon.png', color: '#005bff' },
+    { name: 'Halyk', logo: '/marketplaces/halyk.png', color: '#00a651' },
+    { name: 'Teez', logo: '/marketplaces/teez.png', color: '#44d62c' },
+    { name: 'Flip.kz', logo: '/marketplaces/flip.png', color: '#2f80ed' }
   ];
 
   return (
@@ -40,7 +40,7 @@ export const MarketplacesSection: React.FC<{ language: Language }> = ({ language
             >
               <div className="w-12 h-12 rounded-xl bg-white border border-[#E5E5E1] flex items-center justify-center shadow-xs overflow-hidden">
                 <img
-                  src={`https://www.google.com/s2/favicons?domain=${marketplace.domain}&sz=128`}
+                  src={marketplace.logo}
                   alt={`${marketplace.name} logo`}
                   className="w-8 h-8 object-contain"
                   loading="lazy"
