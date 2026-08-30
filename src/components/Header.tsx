@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Clock, MapPin, Menu, X, ShieldCheck, FileSpreadsheet } from 'lucide-react';
+import { Phone, MessageCircle, Clock, MapPin, Menu, X, ShieldCheck } from 'lucide-react';
 import { COMPANY_CONTACTS } from '../data/products';
 
 interface HeaderProps {
   onOpenOrderModal: (productType?: string) => void;
-  onOpenManagerDrawer: () => void;
-  orderCount: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenOrderModal, onOpenManagerDrawer, orderCount }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenOrderModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollTo = (id: string) => {
@@ -48,14 +46,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenOrderModal, onOpenManagerD
               Сертификаты и карантинные документы
             </span>
 
-            <button
-              onClick={onOpenManagerDrawer}
-              className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#748C2E] text-white font-bold hover:bg-[#607424] transition cursor-pointer text-[10px] uppercase tracking-wider"
-              title="Административная панель"
-            >
-              <FileSpreadsheet className="w-3 h-3" />
-              <span>{orderCount > 0 ? `Заявки (${orderCount})` : 'Админ'}</span>
-            </button>
           </div>
         </div>
       </div>

@@ -143,11 +143,7 @@ export default function App() {
     <div className="min-h-screen bg-stone-50 text-stone-900 font-sans antialiased selection:bg-emerald-200 selection:text-emerald-950 flex flex-col">
       {/* 1. Header with contacts & navigation */}
       <Header
-        language={language}
-        onLanguageChange={setLanguage}
         onOpenOrderModal={handleOpenOrderModal}
-        onOpenManagerDrawer={() => setIsManagerDrawerOpen(true)}
-        orderCount={orders.length}
       />
 
       {currentProduct ? (
