@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Send } from 'lucide-react';
 import { OrderFormData, Product, StoredOrder } from '../types';
 import { Language, UI_TEXT } from '../i18n';
+import { buildLeadWhatsappUrl } from '../utils/whatsapp';
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -89,6 +90,11 @@ export const OrderModal: React.FC<OrderModalProps> = ({
       setIsSubmitting(false);
       onClose();
       onOrderSuccess(newOrder);
+      window.location.href = buildLeadWhatsappUrl({
+        language,
+        name: formData.name.trim(),
+        phone: formData.phone.trim()
+      });
     }, 450);
   };
 
@@ -160,7 +166,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
               <span>Отправляем...</span>
             ) : (
               <>
-                <span>{text.getOffer}</span>
+                <span>{language === 'ru' ? 'Отправить в WhatsApp' : 'WhatsApp-қа жіберу'}</span>
                 <Send className="w-3.5 h-3.5" />
               </>
             )}

@@ -3,6 +3,7 @@ import { Send, Phone, MessageCircle, CheckCircle2 } from 'lucide-react';
 import { OrderFormData, Product, StoredOrder } from '../types';
 import { COMPANY_CONTACTS } from '../data/products';
 import { Language, UI_TEXT } from '../i18n';
+import { buildLeadWhatsappUrl } from '../utils/whatsapp';
 
 interface OrderFormProps {
   language: Language;
@@ -97,6 +98,11 @@ export const OrderForm: React.FC<OrderFormProps> = ({
 
       setIsSubmitting(false);
       onOrderSuccess(newOrder);
+      window.location.href = buildLeadWhatsappUrl({
+        language,
+        name: formData.name.trim(),
+        phone: formData.phone.trim()
+      });
 
       setFormData({
         name: '',
@@ -219,7 +225,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({
                     <span>Отправка данных...</span>
                   ) : (
                     <>
-                      <span>{text.getOffer}</span>
+                      <span>{language === 'ru' ? 'Отправить в WhatsApp' : 'WhatsApp-қа жіберу'}</span>
                       <Send className="w-3.5 h-3.5" />
                     </>
                   )}
