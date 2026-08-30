@@ -5,12 +5,12 @@ import { Language } from '../i18n';
 
 export const MarketplacesSection: React.FC<{ language: Language }> = ({ language }) => {
   const marketplaces = [
-    { name: 'Kaspi.kz', mark: 'K', bg: '#e31e24', text: '#ffffff' },
-    { name: 'Wildberries', mark: 'WB', bg: '#a100ff', text: '#ffffff' },
-    { name: 'Ozon', mark: 'O', bg: '#005bff', text: '#ffffff' },
-    { name: 'Halyk', mark: 'H', bg: '#00a651', text: '#ffffff' },
-    { name: 'Tez', mark: 'T', bg: '#ff7a00', text: '#ffffff' },
-    { name: 'Flip.kz', mark: 'F', bg: '#2f80ed', text: '#ffffff' }
+    { name: 'Kaspi.kz', domain: 'kaspi.kz', color: '#e31e24' },
+    { name: 'Wildberries', domain: 'wildberries.ru', color: '#a100ff' },
+    { name: 'Ozon', domain: 'ozon.ru', color: '#005bff' },
+    { name: 'Halyk', domain: 'halykmarket.kz', color: '#00a651' },
+    { name: 'Tez', domain: 'tez.kz', color: '#ff7a00' },
+    { name: 'Flip.kz', domain: 'flip.kz', color: '#2f80ed' }
   ];
 
   return (
@@ -38,14 +38,16 @@ export const MarketplacesSection: React.FC<{ language: Language }> = ({ language
               key={marketplace.name}
               className="bg-[#FDFCF8] border border-[#E5E5E1] rounded-xl p-4 shadow-xs hover:border-[#1B4332] transition"
             >
-              <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm shadow-xs"
-                style={{ backgroundColor: marketplace.bg, color: marketplace.text }}
-                aria-hidden="true"
-              >
-                {marketplace.mark}
+              <div className="w-12 h-12 rounded-xl bg-white border border-[#E5E5E1] flex items-center justify-center shadow-xs overflow-hidden">
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${marketplace.domain}&sz=128`}
+                  alt={`${marketplace.name} logo`}
+                  className="w-8 h-8 object-contain"
+                  loading="lazy"
+                />
               </div>
               <div className="mt-3 text-sm font-black text-[#1B4332]">{marketplace.name}</div>
+              <div className="mt-1 h-1 w-10 rounded-full" style={{ backgroundColor: marketplace.color }} />
               <div className="mt-1 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#748C2E]">
                 <Store className="w-3 h-3" />
                 {language === 'ru' ? 'В наличии' : 'Бар'}
