@@ -18,3 +18,10 @@ View your app in AI Studio: https://ai.studio/apps/6032be6c-7502-4cba-90d6-9a50a
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## WhatsApp Cloud API + ИИ
+
+Инструкция по подключению: [docs/whatsapp-setup.md](docs/whatsapp-setup.md).
+Бот работает через Netlify Functions; отдельный сервер не нужен.
+Проверки без реальных сообщений и API-ключей: `npm test`, `npm run lint`, `npm run build`.
+`npm run dev` запускает только сайт; функции проверяются тестами или через Netlify Dev.
